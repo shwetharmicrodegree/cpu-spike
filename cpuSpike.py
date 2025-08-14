@@ -18,7 +18,7 @@ def cpu_worker(target_load, duration):
             pass  # Burn CPU
         time.sleep(idle_time)
 
-def simulate_cpu_spike(duration=30, cpu_percent=85):
+def simulate_cpu_spike(duration=90, cpu_percent=85):
     """Run on all CPU cores."""
     num_cores = multiprocessing.cpu_count()
     print(f"Simulating {cpu_percent}% CPU usage on {num_cores} cores for {duration}s...")
@@ -32,5 +32,5 @@ def simulate_cpu_spike(duration=30, cpu_percent=85):
     print("CPU spike simulation completed.")
 
 if __name__ == '__main__':
-    # Spike CPU to 85% for 30 seconds
-    simulate_cpu_spike(duration=30, cpu_percent=85)
+    # Spike CPU to 85% for 90 seconds
+    simulate_cpu_spike(duration=90, cpu_percent=85)
